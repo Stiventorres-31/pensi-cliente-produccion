@@ -36,9 +36,9 @@ const Detalle = () => {
     const getInmuebles = async () => {
         const response = await sendRequest('GET', {}, '/api/inmuebles/' + id, '', false);
 
-        setInmueble(response.inmueble);
+        setInmueble(response.data.inmueble);
 
-        const imagenes = response.inmueble.fotos || [];
+        const imagenes = response.data.inmueble.fotos || [];
         setImagenes(imagenes);
 
         if (imagenes.length > 0) {
@@ -92,7 +92,7 @@ const Detalle = () => {
                                 {new Intl.NumberFormat("es-CO", {
                                     style: "currency",
                                     currency: "COP",
-                                }).format(inmueble.precio - inmueble.precio_descuento)}
+                                }).format(inmueble.precio_descuento)}
                             </p>
                         )}
                     </div>

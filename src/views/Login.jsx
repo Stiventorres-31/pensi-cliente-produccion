@@ -47,11 +47,11 @@ const Login = () => {
 
         try {
             const response = await sendRequest('POST', { email: emailU, password: passwordU }, '/api/login/client', '', false);
-            if (response.status) {
+            if (response.status===200) {
                 setEmailU('');
                 setPasswordU('');
-                storage.set('authToken', response.token);
-                storage.set('authUser', response.data);
+                storage.set('authToken', response.data.token);
+                storage.set('authUser', response.data.cliente);
 
                 setSubming(false);
 
@@ -71,7 +71,7 @@ const Login = () => {
         setSubming(true);
         try {
             const response = await sendRequest('POST', { type_register: 'client_jmci', nombres: nombres, tipo_identidad: tipo_identidad, numero_identidad: numero_identidad, email: email, password: password, password_confirmation: password_confirmation }, '/api/clients', '', false);
-            if (response.status) {
+            if (response.status===200) {
                 setEmail('');
                 setPassword('');
                 setPassword_confirmation('');
@@ -79,8 +79,8 @@ const Login = () => {
                 setTipo_identidad('');
                 setNumero_identidad('');
 
-                storage.set('authToken', response.token);
-                storage.set('authUser', response.data);
+                storage.set('authToken', response.data.token);
+                storage.set('authUser', response.data.cliente);
 
                 setSubming(false);
 

@@ -56,7 +56,7 @@ const Landing = () => {
         "",
         false
       );
-      setInmueblesDes(response.inmuebles_destacados);
+      setInmueblesDes(response.data.inmuebles_destacados);
 
       const responseNove = await sendRequest(
         "GET",
@@ -65,7 +65,7 @@ const Landing = () => {
         "",
         false
       );
-      setNovedades(responseNove.noticias);
+      setNovedades(responseNove.data.noticias);
     };
 
     fetchInmuebles();

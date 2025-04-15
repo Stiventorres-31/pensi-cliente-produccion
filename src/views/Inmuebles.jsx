@@ -56,7 +56,7 @@ function Inmuebles() {
       response = await sendRequest('GET', {}, '/api/inmuebles', '', false);
     }
 
-    setInmuebles(response.inmuebles);
+    setInmuebles(response.data.inmuebles);
     setLoading(false);
   };
 
