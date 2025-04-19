@@ -16,7 +16,7 @@ function Filtros({ applyFilters }) {
         region: '',
         pais: '',
         ciudad: '',
-        hubicacion: '',
+        ubicacion: '',
         min_habitaciones: '',
         max_habitaciones: '',
         id_genero: '',
@@ -95,7 +95,7 @@ function Filtros({ applyFilters }) {
                 </div>
                 <div>
                     <label>Ubicación</label>
-                    <input list="ubicacion-list" name="hubicacion" value={filters.hubicacion} onChange={handleChange} />
+                    <input list="ubicacion-list" name="ubicacion" value={filters.ubicacion} onChange={handleChange} />
                     <datalist id="ubicacion-list">
                         <option value="Bogotá" />
                         <option value="Medellín" />
