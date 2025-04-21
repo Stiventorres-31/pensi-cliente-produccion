@@ -27,7 +27,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://wa.link/abp000" className="contact-link" target='_blank' rel="noopener noreferrer">
+                <a href="https://wa.link/7x17bg" className="contact-link" target='_blank' rel="noopener noreferrer">
                   <ion-icon name="call-outline"></ion-icon>
                   <span>(+57) 311 3109165</span>
                 </a>
@@ -85,10 +85,10 @@ const Footer = () => {
                 <p className="footer-list-title">Servicios</p>
               </li>
               <li>
-                <a href="#consigue-tu-pen" className="footer-link">Consigue tu pen</a>
+                <a href="#property" className="footer-link">Consigue tu pen</a>
               </li>
               <li>
-                <a href="#publica-tu-pen" className="footer-link">Publica tu pen</a>
+                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAAFrxoTZUMjZVWUhFQVhGVjRWUk5CMVY5M0cyS0JXNS4u" className="footer-link">Publica tu pen</a>
               </li>
               {/* <li>
                 <a href="https://wa.link/abp000" target='_blank' rel="noopener noreferrer" className="footer-link">Vender una casa</a>
@@ -101,13 +101,13 @@ const Footer = () => {
                 <p className="footer-list-title">Customer Care</p>
               </li>
               <li>
-                <a href="#" className="footer-link">Registro & inicio de sesión</a>
+                <a href="/login" className="footer-link">Registro & inicio de sesión</a>
               </li>
-              <li>
+              {/*<li>
                 <a href="#" className="footer-link">Lista de deseos</a>
-              </li>
+              </li>*/}
               <li>
-                <a href="#" className="footer-link">Terminos & Condiciones</a>
+                <a href="/terminos" className="footer-link">Terminos & Condiciones</a>
               </li>
             </ul>
 
