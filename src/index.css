@@ -353,7 +353,8 @@ html {
   font-family: var(--ff-nunito-sans);
   scroll-behavior: smooth;
 }
-.pages{
+
+.pages {
   scroll-behavior: smooth;
 }
 
@@ -2745,7 +2746,8 @@ a {
   .image-main {
     border: none;
   }
-  .card-item.genero{
+
+  .card-item.genero {
     display: none;
   }
 }
@@ -2808,7 +2810,7 @@ a {
 }
 
 /************Loging */
-.btns-form{
+.btns-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2820,14 +2822,14 @@ a {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
-  height: 100vh; 
-  background: 
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-      url('assets/background-login.jpg');
+  height: 100vh;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('assets/background-login.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; 
-  color: white; 
+  background-attachment: fixed;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2839,7 +2841,7 @@ a {
   display: flex;
   border-radius: 20px;
   box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
-  height: 500px;
+  height: 540px;
   max-width: 900px;
   transition: all 1s ease;
   margin: 10px;
@@ -2869,7 +2871,7 @@ a {
 }
 
 .info-childs p {
-  margin: 15px 0 ;
+  margin: 15px 0;
   color: #555;
 }
 
@@ -2949,7 +2951,8 @@ a {
   box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
 }
 
-.form label input,select{
+.form label input,
+select {
   width: 100%;
   padding: 10px;
   background-color: #fff;
@@ -3010,4 +3013,69 @@ a {
     border-bottom-left-radius: 20px;
     border-top-right-radius: 0;
   }
+}
+
+
+/**
+Terminos y condiciones
+***/
+.terms-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.terms-container hr {
+  margin: 30px 0px;
+
+}
+
+.terms-text {
+  color: var(--cadet);
+  font-size: var(--fs-5);
+  line-height: 1.7;
+  margin-top: 30px;
+
+}
+
+.terms-list {
+  color: var(--cadet);
+  font-size: var(--fs-5);
+  line-height: 1.7;
+  margin-top: 10px;
+  padding-left: 30px;
+  list-style-type: none;
+}
+
+.terms-list li {
+  list-style-type: disc !important;
+
+}
+
+.info-terms {
+  margin-top: 20px;
+  color: #000;
+  font-size: var(--fs-5);
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+
+.span-date {
+  display: flex;
+  padding: 0;
+  margin-top: -20px;
+  justify-content: start;
+  font-weight: 500;
+}
+
+.span-date span {
+  color: var(--cadet);
+}
+
+.terms-container .card-title {
+  font-size: var(--fs-5);
+  margin-top: 20px;
 }

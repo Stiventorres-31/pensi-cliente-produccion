@@ -16,6 +16,7 @@ const Login = () => {
     const [nombres, setNombres] = useState('');
     const [tipo_identidad, setTipo_identidad] = useState('');
     const [numero_identidad, setNumero_identidad] = useState('');
+    const [check_terminos, setCheck_terminos] = useState(false);
     const [isSubming, setSubming] = useState(false);
 
 
@@ -47,7 +48,7 @@ const Login = () => {
 
         try {
             const response = await sendRequest('POST', { email: emailU, password: passwordU }, '/api/login/client', '', false);
-            if (response.status===200) {
+            if (response.status === 200) {
                 setEmailU('');
                 setPasswordU('');
                 storage.set('authToken', response.data.token);
@@ -70,14 +71,15 @@ const Login = () => {
         e.preventDefault();
         setSubming(true);
         try {
-            const response = await sendRequest('POST', { type_register: 'client_jmci', nombres: nombres, tipo_identidad: tipo_identidad, numero_identidad: numero_identidad, email: email, password: password, password_confirmation: password_confirmation }, '/api/clients', '', false);
-            if (response.status===200) {
+            const response = await sendRequest('POST', { type_register: 'client_jmci', nombres: nombres, tipo_identidad: tipo_identidad, numero_identidad: numero_identidad, email: email, password: password, password_confirmation: password_confirmation, terminos: check_terminos }, '/api/clients', '', false);
+            if (response.status === 200) {
                 setEmail('');
                 setPassword('');
                 setPassword_confirmation('');
                 setNombres('');
                 setTipo_identidad('');
                 setNumero_identidad('');
+                setCheck_terminos(false);
 
                 storage.set('authToken', response.data.token);
                 storage.set('authUser', response.data.cliente);
@@ -200,6 +202,7 @@ const Login = () => {
                                 <label>
                                     <i className='bx bx-envelope'></i>
                                     <input type="email" placeholder="Correo Electronico"
+                                        required
                                         value={email} onChange={handleEmailChange}
                                         name="email" />
                                 </label>
@@ -209,8 +212,9 @@ const Login = () => {
                                 <label>
                                     <i className='bx bx-lock-alt'></i>
                                     <input type="password" placeholder="Contraseña"
+                                        required
                                         value={password} onChange={(e) => setPassword(e.target.value)}
-                                        minLength={8} 
+                                        minLength={8}
                                         name="password" />
                                 </label>
                             </div>
@@ -218,20 +222,40 @@ const Login = () => {
                                 <label>
                                     <i className='bx bx-lock-alt'></i>
                                     <input type="password"
+                                        required
                                         value={password_confirmation} onChange={(e) => setPassword_confirmation(e.target.value)}
-                                        minLength={8} 
+                                        minLength={8}
                                         placeholder="Confirmar contraseña" name="password_confirmation" />
                                 </label>
                             </div>
+
+                            <div style={{ marginTop: "15px", color: "#000", padding: "10px 0" }}>
+                                <label style={{ padding: "10px 0", fontSize: "13px !important", background: "transparent", border: "none", boxShadow: "none" }}>
+                                    <input
+                                        style={{ width: "auto", marginLeft: "15px", marginRight: "10px" }}
+                                        type="checkbox"
+                                        name="aceptoTerminos"
+                                        required
+                                        checked={check_terminos}
+                                        onChange={(e) => setCheck_terminos(e.target.checked)}
+                                    />
+                                    Acepto los
+                                    <a style={{ marginLeft: "5px" }} href="/terminos" target="_blank" rel="noopener noreferrer">
+                                        Términos y Condiciones
+                                    </a>
+                                </label>
+
+                            </div>
+
                             <div className='btns-form'>
                                 <button type="submit" disabled={isSubming} className='btn-form-login' >Registrarse</button>
                             </div>
                         </form>
                     </div>
                 </div>
-            </div>
+            </div >
 
-        </div>
+        </div >
     )
 }
 

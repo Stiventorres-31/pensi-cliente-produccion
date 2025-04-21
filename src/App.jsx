@@ -5,6 +5,7 @@ import Landing from './views/Landing';
 import Inmuebles from './views/Inmuebles';
 import Detalle from './views/Detalle';
 import Login from './views/Login';
+import TermsAndConditions from './views/Terminos';
 
 
 
@@ -18,6 +19,7 @@ function App() {
             <Route index element={<Landing  />} />
             <Route path='inmuebles' element={<Inmuebles />} />
             <Route path='inmuebles/:id' element={<Detalle />} />
+            <Route path="terminos" element={<TermsAndConditions />} />
           </Route>
           <Route path='/login' element={<Login />} />
         </Routes>
