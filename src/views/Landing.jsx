@@ -90,7 +90,9 @@ const Landing = () => {
               lugar donde comienzan tus mejores momentos!
             </p>
 
-            <button className="btn">Contáctanos</button>
+            <a href="https://wa.link/7x17bg" target="_blank" rel="noopener noreferrer">
+  <button className="btn">Contáctanos</button>
+            </a>
           </div>
 
           <figure className="hero-banner">
@@ -471,7 +473,7 @@ const Landing = () => {
             </div>
 
             <a
-              href="https://api.whatsapp.com/send?phone=573243399662"
+              href="https://wa.link/7x17bg"
               target="_blank"
               rel="noopener noreferrer"
               className="btn cta-btn"
