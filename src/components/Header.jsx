@@ -120,7 +120,7 @@ const Header = () => {
 
                         </ul>
 
-                        <a href="https://api.whatsapp.com/send?phone=573243399662" className="header-top-btn" target="_blank" rel="noopener noreferrer">Contáctanos</a>
+                        <a href="https://wa.link/7x17bg" className="header-top-btn" target="_blank" rel="noopener noreferrer">Contáctanos</a>
                     </div>
 
                 </div>
