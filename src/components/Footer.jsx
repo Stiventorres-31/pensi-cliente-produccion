@@ -33,9 +33,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@Inmueblespensi.com" className="contact-link" target='_blank' rel="noopener noreferrer">
+                <a href="mailto:PensiColombia@hotmail.com" className="contact-link" target='_blank' rel="noopener noreferrer">
                   <ion-icon name="mail-outline"></ion-icon>
-                  <span>info@Inmueblespensi.com</span>
+                  <span>PensiColombia@hotmail.com</span>
                 </a>
               </li>
             </ul>
