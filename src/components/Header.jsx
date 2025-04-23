@@ -178,7 +178,7 @@ const Header = () => {
                     <div className="header-bottom-actions">
 
 
-                        <form className="barra-de-busqueda" onSubmit={handleSearchSubmit}>
+                        <form className="barra-de-busqueda" onSubmit={handleSearchSubmit} method='POST'>
                             <input
                                 type="text"
                                 placeholder="Buscar..."
@@ -187,8 +187,9 @@ const Header = () => {
                                 value={searchQuery}
                                 onChange={handleSearchChange}
                             />
-                            <button type="submit" style={{ background: 'none', border: 'none', color: '#ffff' }}>
-                                <i className="fa-solid fa-magnifying-glass"></i>
+                            <button type="submit" aria-label="Buscar" style={{ background: 'none', border: 'none', color: '#ffff' }}>
+                            
+                            <i className="fas fa-search"></i>
                             </button>
                         </form>
 

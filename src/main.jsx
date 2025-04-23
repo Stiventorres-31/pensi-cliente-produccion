@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import axios from 'axios'
 import axiosInstance from './config/axios.js'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 window.axios = axiosInstance;
